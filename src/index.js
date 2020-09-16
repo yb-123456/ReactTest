@@ -1,6 +1,7 @@
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 import './framework/reset.css';
+import './framework/icon.css';
 import './framework/font-awesome/css/font-awesome.min.css';
 
 import React from 'react';
@@ -9,11 +10,13 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 import Order from  './main/order'
 import Payment from './main/payment'
 import OrderList from './main/orderlist'
+import Index from './main/index'
 // import './js/payment'
 
 ReactDOM.render(
     <Router>
         <div>
+            <Route path="/" component={Index}/>
             <Route exact path="/order" component={Order}/>
             <Route path="/payment/:name" component={Payment}/>
             <Route path="/orderlist" component={OrderList}/>
